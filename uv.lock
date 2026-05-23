@@ -717,8 +717,13 @@ dependencies = [
     { name = "scikit-learn" },
     { name = "scipy" },
     { name = "seaborn" },
-    { name = "tensorflow", extra = ["and-cuda"] },
+    { name = "tensorflow" },
     { name = "ultralytics" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "tensorflow", extra = ["and-cuda"] },
 ]
 
 [package.metadata]
@@ -733,9 +738,12 @@ requires-dist = [
     { name = "scikit-learn", specifier = ">=1.8.0" },
     { name = "scipy", specifier = ">=1.17.1" },
     { name = "seaborn", specifier = ">=0.13.2" },
-    { name = "tensorflow", extras = ["and-cuda"], specifier = ">=2.21.0" },
+    { name = "tensorflow", specifier = ">=2.21.0" },
     { name = "ultralytics", specifier = ">=8.4.53" },
 ]
+
+[package.metadata.requires-dev]
+dev = [{ name = "tensorflow", extras = ["and-cuda"], specifier = ">=2.21.0" }]
 
 [[package]]
 name = "httpcore"
